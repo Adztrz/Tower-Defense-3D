@@ -1180,6 +1180,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4085449212347395061}
+  - {fileID: 1443004291}
   m_Father: {fileID: 1757306309}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -1641,6 +1642,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3064212606916768031, guid: 690c484e66cd27247ae84c4e69352ac8, type: 3}
   m_PrefabInstance: {fileID: 1195440741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1443004290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1443004291}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1443004291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443004290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00000023365023, y: 0, z: 2.6250002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 770921070}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1570339956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,10 +1949,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa0aa517295a2744aa21a8710502978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  range: 15
+  range: 25
+  fireRate: 1
   enemyTag: Enemy
   partToRotate: {fileID: 770921070}
+  turnSpeed: 10
+  bulletPrefab: {fileID: 658884704256051236, guid: 0cb83f43e929f9b47bf810ed2025c267, type: 3}
+  firePoint: {fileID: 1443004291}
 --- !u!4 &1757306309
 Transform:
   m_ObjectHideFlags: 0
@@ -1929,7 +1964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757306307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.692566, y: 1.2749939, z: -49.887337}
+  m_LocalPosition: {x: -14.442566, y: 1.2749939, z: -44.887337}
   m_LocalScale: {x: 1.9600003, y: 1.9600002, z: 1.9600005}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2342,7 +2377,7 @@ GameObject:
   - component: {fileID: 233454011867453064}
   - component: {fileID: 233454011855682442}
   m_Layer: 0
-  m_Name: Base_MachineGun_L01
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2554,7 +2589,7 @@ GameObject:
   - component: {fileID: 4085449212349163797}
   - component: {fileID: 4085449212337800213}
   m_Layer: 0
-  m_Name: Turret_MachineGun_L01
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
